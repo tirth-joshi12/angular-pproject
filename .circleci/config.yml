@@ -41,7 +41,7 @@ jobs:
           name: Deploy
           command: |
             if [ $CIRCLE_BRANCH = 'main' ]; then
-              aws s3 sync /dist/my-app s3://angular-app-deploy-625/ --delete --exact-timestamps;
+              aws s3 sync /dist/my-app/ s3://angular-app-deploy-625/ --delete --exact-timestamps;
             fi
 workflows:
   version: 2.1
